@@ -10,7 +10,7 @@ Requirements:
 
 * VM [Vagrant] (https://www.vagrantup.com/downloads.html)
 * SSH Client [PuTTY] (http://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html)
-* Vangrat/Putty [Config](https://github.com/Varying-Vagrant-Vagrants/VVV/wiki/Connect-to-Your-Vagrant-Virtual-Machine-with-PuTTY)
+* Vagrant/Putty [Config](https://github.com/Varying-Vagrant-Vagrants/VVV/wiki/Connect-to-Your-Vagrant-Virtual-Machine-with-PuTTY)
 
 Commands
 --------
