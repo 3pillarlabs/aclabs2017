@@ -1,7 +1,7 @@
 # Python and Django - ACLabs 2017
 
-![Python] (https://www.python.org/static/community_logos/python-logo-master-v3-TM.png)
-![Django] (https://www.djangoproject.com/s/img/logos/django-logo-positive.png)
+<img src="https://www.python.org/static/community_logos/python-logo-master-v3-TM.png" alt="Python" width="200" height="70">
+<img src="https://www.djangoproject.com/s/img/logos/django-logo-positive.png" alt="Django" width="150" height="55">
 
 Requirements
 ------------
