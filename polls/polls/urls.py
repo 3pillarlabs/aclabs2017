@@ -17,11 +17,10 @@ from django.conf.urls import url, include
 from django.contrib import admin
 from django.conf import settings
 
-from . import views
 
 urlpatterns = [
+    url(r'^polls/', include('polls_app.urls')),
     url(r'^admin/', admin.site.urls),
-    url(r'^$', views.hello)
 ]
 
 if settings.DEBUG:
