@@ -1,0 +1,76 @@
+[
+    {
+        "pollName": "poll 1",
+        "questions": [
+            {
+                "questionName": "Favorite color",
+                "options": [
+                    "red",
+                    "blue",
+                    "green"
+                ]
+            },
+            {
+                "questionName": "Favorite movie",
+                "options": [
+                    "Terminator",
+                    "Alien",
+                    "Interstellar"
+                ]
+            },
+            {
+                "questionName": "Favorite band",
+                "options": [
+                    "Nightwish",
+                    "Queen",
+                    "Coldplay"
+                ]
+            },
+            {
+                "questionName": "Favorite pet",
+                "options": [
+                    "dog",
+                    "cat",
+                    "snake"
+                ]
+            }
+        ]
+    },
+    {
+        "pollName": "poll 1",
+        "questions": [
+            {
+                "questionName": "Best actor",
+                "options": [
+                    "Brad Pitt",
+                    "Angelina Jolie",
+                    "Tom Hanks"
+                ]
+            },
+            {
+                "questionName": "Best car brand",
+                "options": [
+                    "Audi",
+                    "Dacia",
+                    "Kia"
+                ]
+            },
+            {
+                "questionName": "Best vacation country",
+                "options": [
+                    "Romania",
+                    "France",
+                    "Bulgaria"
+                ]
+            },
+            {
+                "questionName": "Best programming language",
+                "options": [
+                    "Python",
+                    "Go",
+                    "Rust"
+                ]
+            }
+        ]
+    }
+]
