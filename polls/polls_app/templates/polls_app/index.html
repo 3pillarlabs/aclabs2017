@@ -8,10 +8,10 @@
 </head>
 <body>
     <h2>Polls:</h2>
-    <ul>
+    <ul class="list-group">
         {% for poll in polls %}
-            <li>{{ poll.pollName }}</li>
-        {% else %} 
+            <li class="list-group-item"><a href={% url "detail" poll.pollName %}>{{ poll.pollName }}</a></li>
+        {% empty %} 
              No polls available.
         {% endfor %}
     </ul>

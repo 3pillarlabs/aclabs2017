@@ -1,6 +1,6 @@
 [
     {
-        "pollName": "poll 1",
+        "pollName": "poll_1",
         "questions": [
             {
                 "questionName": "Favorite color",
@@ -37,7 +37,7 @@
         ]
     },
     {
-        "pollName": "poll 1",
+        "pollName": "poll 2",
         "questions": [
             {
                 "questionName": "Best actor",
@@ -74,3 +74,4 @@
         ]
     }
 ]
+

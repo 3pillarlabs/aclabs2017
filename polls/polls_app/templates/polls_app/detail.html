@@ -1,0 +1,39 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Polls App</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" 
+    integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" 
+    crossorigin="anonymous">
+    <link rel="stylesheet" href="{% static "polls_app/style.css" %}">
+</head>
+<body>
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            <h3 class="panel-title">Poll {{ poll.pollName }}</h3>
+        </div>
+        <div class="panel-body">
+            <form action={% url "detail" poll.pollName %} method="POST">
+                {% csrf_token %}
+                <h4> Questions </h4>
+                <ul class="list-group">
+                    {% for question in poll.questions %}
+                    <li class="list-group-item"><span class="question-name">{{ question.questionName }}</span>
+                        <select class="form-control">
+                            {% for option in question.options %}
+                            <option> {{option}} </option>
+                            {% empty %}
+                            No options boss
+                            {% endfor %}
+                        </select>
+                    </li>
+                    {% empty %} No questions available. {% endfor %}
+                    <button type="submit" class="btn btn-primary submit">Submit</button>
+                </ul>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

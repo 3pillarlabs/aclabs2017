@@ -1,8 +1,17 @@
 import json
 import os
+import faker
 
 from django import http
-from django.shortcuts import render
+from django.shortcuts import render, redirect
+
+
+def read_datafile():
+    filepath = os.path.join(os.path.dirname(__file__), "polls.json")
+    with open(filepath) as fp:
+        return json.loads(fp.read())
+
+DATA = read_datafile()
 
 
 def hello(request):
@@ -14,9 +23,17 @@ def hello(request):
 
 
 def index(request):
-    file_path = os.path.join(os.path.dirname(__file__), "polls.json")
-    with open(file_path) as fp:
-        polls = json.loads(fp.read())
     return render(request, "polls_app/index.html", {
-        "polls": polls
+        "polls": DATA,
+        "faker": faker.Faker()
+    })
+
+
+def detail(request, pollname):
+    if request.method == 'POST':
+        return redirect('index')
+    polls = (poll for poll in DATA if poll['pollName'] == pollname)
+    poll = next(polls)
+    return render(request, "polls_app/detail.html", {
+        "poll": poll
     })
