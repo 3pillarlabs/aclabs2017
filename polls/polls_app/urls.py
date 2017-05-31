@@ -5,5 +5,5 @@ from . import views
 urlpatterns = [
     url(r'^hello/$', views.hello, name='hello'),
     url(r'^$', views.index, name='index'),
-    url(r'^(?P<pollname>[\w\s]+)/$', views.detail, name='detail'),
+    url(r'^(?P<slug>[-_\w\s]+)/$', views.detail, name='detail'),
 ]

@@ -12,17 +12,17 @@
 <body>
     <div class="panel panel-default">
         <div class="panel-heading">
-            <h3 class="panel-title">Poll {{ poll.pollName }}</h3>
+            <h3 class="panel-title">Poll {{ poll.name }}</h3>
         </div>
         <div class="panel-body">
-            <form action={% url "detail" poll.pollName %} method="POST">
+            <form action={% url "detail" poll.slug %} method="POST">
                 {% csrf_token %}
                 <h4> Questions </h4>
                 <ul class="list-group">
-                    {% for question in poll.questions %}
-                    <li class="list-group-item"><span class="question-name">{{ question.questionName }}</span>
+                    {% for question in poll.questions.all %}
+                    <li class="list-group-item"><span class="question-name">{{ question.question_text }}</span>
                         <select class="form-control">
-                            {% for option in question.options %}
+                            {% for option in question.choice_set.all %}
                             <option> {{option}} </option>
                             {% empty %}
                             No options boss
