@@ -1,9 +1,7 @@
 import json
 import os
-import faker
 
 from django import http
-from django.forms import ModelForm
 from django.db.models import F
 from django.shortcuts import render, redirect, get_object_or_404
 from .models import Poll, Question, Choice
@@ -30,18 +28,6 @@ def index(request):
     return render(request, "polls_app/index.html", {
         "polls": polls_qs,
     })
-
-
-class PollForm(ModelForm):
-    class Meta:
-        model = Poll
-        fields = ('questions', )
-
-
-class QuestionForm(ModelForm):
-    class Meta:
-        model = Question
-        fields = '__all__'
 
 
 def detail(request, slug):
