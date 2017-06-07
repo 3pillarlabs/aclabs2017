@@ -33,6 +33,7 @@ def index(request):
 def detail(request, slug):
     if request.method == 'POST':
         for key, value in request.POST.items():
+            # "question-42: 25"
             if key.startswith('question-'):
                 Choice.objects.filter(pk=value).update(votes=F('votes') + 1)
         return redirect('result', slug=slug)
@@ -43,6 +44,15 @@ def detail(request, slug):
     return render(request, "polls_app/detail.html", {
         "poll": poll
     })
+
+
+def clear(request, slug):
+    #poll = Poll.objects.get(slug=slug)
+    questions = Question.objects.filter(poll__slug=slug)
+    Choice.objects.filter(question__in=questions).update(votes=0)
+    #for question in poll.questions.all():
+    #    question.choice_set.all().update(votes=0)
+    return redirect('result', slug=slug)
 
 
 def result(request, slug):

@@ -7,4 +7,5 @@ urlpatterns = [
     url(r'^$', views.index, name='index'),
     url(r'^(?P<slug>[-_\w\s]+)/$', views.detail, name='detail'),
     url(r'^(?P<slug>[-_\w\s]+)/result/$', views.result, name='result'),
+    url(r'^(?P<slug>[-_\w\s]+)/clear/$', views.clear, name='clear'),
 ]
