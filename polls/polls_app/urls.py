@@ -6,4 +6,5 @@ urlpatterns = [
     url(r'^hello/$', views.hello, name='hello'),
     url(r'^$', views.index, name='index'),
     url(r'^(?P<slug>[-_\w\s]+)/$', views.detail, name='detail'),
+    url(r'^(?P<slug>[-_\w\s]+)/result/$', views.result, name='result'),
 ]

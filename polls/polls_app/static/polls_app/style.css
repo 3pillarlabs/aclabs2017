@@ -11,3 +11,7 @@ select.form-control {
 .submit {
     margin-top: 20px;
 }
+
+.detail-question {
+    font-weight: 600;
+}
